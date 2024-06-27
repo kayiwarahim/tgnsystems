@@ -150,9 +150,10 @@ body{
 .home{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.jpg);
+    background-image: url(../images/coding1.avif);
+    filter: brightness(0.8);
     background-size: cover;
-    display: flex;
+    display : flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
@@ -164,12 +165,12 @@ body{
 
 .home h1{
     color: #fff;
-    font-size: 5.5rem;
+    font-size: 9.5rem;
 }
 
 .home h2{
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .home .wave{
@@ -328,7 +329,8 @@ body{
   }   
 
 .counters {
-	background-image: url(../images/img2.jpg);
+	background-image: url(../images/coding2.avif);
+    filter: brightness(0.8);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -459,7 +461,8 @@ body{
 .communicate{
     text-align: center;
     align-items: center;
-    background-image: url(../images/img3.jpg);
+    background-image: url(../images/coding4.jpg);
+    filter: brightness(0.8);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1010,7 +1013,8 @@ body{
             width: 100vw;
             text-align: center;
             padding: 0 2rem;
-            background: url(../images/faq.jpg);
+            background: url(../images/coding3.jpg);
+            filter: brightness(0.8);
             background-repeat: no-repeat;
             background-size: cover;
         }
