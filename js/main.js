@@ -19,6 +19,8 @@ $(document).ready(function(){
         }
     });
 
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
     const counters = document.querySelectorAll('.counter');
     const speed = 120;
     counters.forEach(counter => {
