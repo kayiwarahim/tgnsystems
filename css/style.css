@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
+    text-transform: none;
     transition: all .2s linear;
     text-decoration: none;
 }
@@ -16,6 +16,58 @@ html{
 
 body{
     overflow-x: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+    background-color: #002e5f;
+}
+
+.header .logo img{
+    width: 130%;
+    height: 3rem;
+    top: 0;
+    left: 0;
+}
+
+.header .navbar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .navbar ul li{
+    margin: 0 1.5rem;
+}
+
+.header .navbar ul li a{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header .navbar ul li a:hover{
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+.header .logo i{
+    padding: 0.5rem;
+}
+
+.header .fa-bars{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
 }
 
 .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
@@ -93,58 +145,6 @@ body{
     opacity: .9;
     color: white;
     background: #00bfff;
-}
-
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    position: fixed;
-}
-
-.header .logo img{
-    width: 130%;
-    height: 3rem;
-    top: 0;
-    left: 0;
-}
-
-.header .navbar ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.header .navbar ul li{
-    margin: 0 1.5rem;
-}
-
-.header .navbar ul li a{
-    font-size: 2rem;
-    color: #fff;
-}
-
-.header .navbar ul li a:hover{
-    color: #00bfff;
-    text-decoration: underline;
-}
-
-.header .logo i{
-    padding: 0.5rem;
-}
-
-.header .fa-bars{
-    color: #fff;
-    cursor: pointer;
-    font-size: 3rem;
-    display: none;
 }
 
 .home{
@@ -1339,6 +1339,7 @@ body{
             font-size: 1.5rem;
 		}
 
+        
         .back-to-top {
             width: 30px;
             height: 30px;
