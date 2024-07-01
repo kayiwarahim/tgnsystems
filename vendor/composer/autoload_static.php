@@ -10,7 +10,6 @@ class ComposerStaticInitb299d17303e629ef36c433e6d8390978
         'P' => 
         array (
             'Priyansh\\Itcompany\\' => 19,
-            'PHPMailer\\PHPMailer\\' => 20,
         ),
     );
 
@@ -18,10 +17,6 @@ class ComposerStaticInitb299d17303e629ef36c433e6d8390978
         'Priyansh\\Itcompany\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'PHPMailer\\PHPMailer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
     );
 

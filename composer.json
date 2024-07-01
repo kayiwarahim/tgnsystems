@@ -9,8 +9,5 @@
         {
             "name": "It Company"
         }
-    ],
-    "require": {
-        "phpmailer/phpmailer": "^6.9"
-    }
+    ]
 }
