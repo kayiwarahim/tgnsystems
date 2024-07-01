@@ -3,7 +3,7 @@
         'name' => 'priyansh/itcompany',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4c5b5b4813781726c438343cf00dbeca7e3b5128',
+        'reference' => '84046ac5d122ee1d54c16c28e662c7ec37d68f4d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'priyansh/itcompany' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4c5b5b4813781726c438343cf00dbeca7e3b5128',
+            'reference' => '84046ac5d122ee1d54c16c28e662c7ec37d68f4d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
