@@ -77,33 +77,3 @@ $('.accordion-header').click(function(){
 });
 
 });
-
-/*sweet alert
-$(document).ready(function() {
-    $('#contactForm').on('submit', function(event) {
-        event.preventDefault();
-
-        $.ajax({
-            url: 'contactme.php',
-            type: 'POST',
-            data: $(this).serialize(),
-            success: function(response) {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Message has been sent successfully.",
-                    icon: "success",
-                    confirmButtonText: "OK"
-                });
-            },
-            error: function(response) {
-                Swal.fire({
-                    title: "Error!",
-                    text: "Message could not be sent.",
-                    icon: "error",
-                    confirmButtonText: "OK"
-                });
-            }
-        });
-    });
-});*/
-

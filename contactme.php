@@ -28,19 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('your_email@gmail.com', 'TGN SYTEMS');
+        $mail->setFrom('your_email@gmail.com', 'TGN SYTEMS ');
         //$mail->addAddress('kayiwarahim@gmail.com', 'Kayiwa Rahim'); // Add the first recipient
         $mail->addAddress('kayiwa.rahim@tgnsystems.org', 'Kayiwa Rahim'); // Add the second recipient
-        $mail->addAddress('admin@tgnsystems.org', 'Admin'); // Add the third recipient
+        $mail->addAddress('sales@tgnsystems.org', 'Sales'); // Add the third recipient
         
 
         // Content
         $mail->isHTML(true);
         $mail->Subject = 'Clients contact submission';
-        $mail->Body    = "Name          : $name<br>
-                          Contact Number: $phone<br>
-                          Email         : $email<br>
-                          Message       : $message";
+        $mail->Body    = "<b>Name      </b>    : $name<br>
+                          <b>Contact Number</b> : $phone<br>
+                          <b>Email     </b>     : $email<br>
+                          <b>Message  </b>      : $message";
         //$mail->AltBody = "Name: $name\nContact Number: $phone\nEmail: $email\nMessage: $message";
 
         $mail->send();
