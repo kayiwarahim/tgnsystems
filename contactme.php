@@ -28,8 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('your_email@gmail.com', 'TGN SYTEMS ');
-        //$mail->addAddress('kayiwarahim@gmail.com', 'Kayiwa Rahim'); // Add the first recipient
+        $mail->setFrom('your_email@gmail.com', 'TGN SYTEMS <svg class="verified-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="#1DA1F2" d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.06 18.26l-4.5-4.5 1.41-1.41L11 15.34l7.09-7.09 1.41 1.41-8.56 8.56z"/>
+        </svg>');
+        $mail->addAddress('kayiwarahim@gmail.com', 'Kayiwa Rahim'); // Add the first recipient
         $mail->addAddress('kayiwa.rahim@tgnsystems.org', 'Kayiwa Rahim'); // Add the second recipient
         $mail->addAddress('sales@tgnsystems.org', 'Sales'); // Add the third recipient
         

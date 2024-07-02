@@ -1359,4 +1359,7 @@ body{
         .faq .row .accordion-container{
             width: 100%;
         }
+        .verified-icon {
+            margin-left: 5px; /* Space between the name and the check mark */
+        }
 }
