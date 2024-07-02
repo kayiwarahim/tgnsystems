@@ -353,7 +353,7 @@
 </section>
 <div class="contact-in">
     <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4578.8475208841055!2d32.59001215868408!3d0.3208948912017431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb85d697aef3%3A0xa0790f0041053e0b!2sGarden%20City%20Shopping%20Mall!5e0!3m2!1sen!2sug!4v1719646698347!5m2!1sen!2sug" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255344.32399760064!2d32.43797914561688!3d0.32264055991020135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42202adac0b36ed1%3A0x98d3cf05446dae1e!2sTGN%20SYSTEMS%20LIMITED!5e0!3m2!1sen!2sug!4v1719896559527!5m2!1sen!2sug" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-form">
         <form id="contactForm" action="contactme.php" method="POST">
@@ -500,7 +500,7 @@
     $(document).ready(function() {
         $('#contactForm').on('submit', function(event) {
             event.preventDefault();
-    
+
             $.ajax({
                 url: 'contactme.php',
                 type: 'POST',
@@ -513,6 +513,10 @@
                             text: response.message,
                             icon: "success",
                             confirmButtonText: "OK"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = 'index.html#contact'; // Redirect after confirmation
+                            }
                         });
                     } else {
                         Swal.fire({
@@ -535,7 +539,7 @@
             });
         });
     });
-    </script>
+</script>
     
 </html>
 
