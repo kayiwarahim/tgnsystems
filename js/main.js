@@ -21,20 +21,20 @@ $(document).ready(function(){
 
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    const counters = document.querySelectorAll('.counter');
-    const speed = 120;
-    counters.forEach(counter => {
-	const updateCount = () => {
-		const target = +counter.getAttribute('data-target');
-		const count = +counter.innerText;
-		const inc = target / speed;
-		if (count < target) {
-			counter.innerText = count + inc;
-			setTimeout(updateCount, 1);
-		} else {
-			counter.innerText = target;
-		}
-	};
+        const counters = document.querySelectorAll('.counter');
+        const speed = 120;
+        counters.forEach(counter => {
+            const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+            if (count < target) {
+                counter.innerText = count + inc;
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
 	  updateCount();
    });
 
@@ -77,3 +77,33 @@ $('.accordion-header').click(function(){
 });
 
 });
+
+/*sweet alert
+$(document).ready(function() {
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            url: 'contactme.php',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Message has been sent successfully.",
+                    icon: "success",
+                    confirmButtonText: "OK"
+                });
+            },
+            error: function(response) {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Message could not be sent.",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            }
+        });
+    });
+});*/
+

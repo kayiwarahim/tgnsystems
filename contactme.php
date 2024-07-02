@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Server settings
-        $mail->SMTPDebug = 2; // Enable verbose debug output
+        $mail->SMTPDebug = 0; // Change this to 0 to hide the debug output
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
         $mail->SMTPAuth = true;
@@ -24,20 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('tgnsystemslimited@gmail.com', 'TGN SYSTEMS LIMITED');
-        $mail->addAddress('kayiwarahim@gmail.com', 'Kayiwa Rahim'); // Add a recipient
-        $mail->addAddress('kayiwa.rahim@tgnsystems.org', 'Kayiwa Rahim'); // Add a recipient
-        $mail->addAddress('admin@tgnsystems.org', 'admin'); // Add a recipient
-
+        $mail->setFrom('your_email@gmail.com', 'Mailer');
+        //$mail->addAddress('kayiwarahim@gmail.com', 'Kayiwa Rahim'); // Add the first recipient
+        $mail->addAddress('kayiwa.rahim@tgnsystems.org', 'Kayiwa Rahim'); // Add the second recipient
+        $mail->addAddress('admin@tgnsystems.org', 'Admin'); // Add the third recipient
 
         // Content
         $mail->isHTML(true);
-        $mail->Subject = 'TGN SYSTEMS LIMITED';
+        $mail->Subject = 'New Contact Form Submission';
         $mail->Body    = "Name: $name<br>Contact Number: $phone<br>Email: $email<br>Message: $message";
-        //$mail->AltBody = "Name: $name\nContact Number: $phone\nEmail: $email\nMessage: $message";
+        $mail->AltBody = "Name: $name\nContact Number: $phone\nEmail: $email\nMessage: $message";
 
         $mail->send();
         echo 'Message has been sent';
+
+        // Redirect to the home page after 2 seconds
+        header("Refresh: 0; URL=index.html#contact"); // Change 'index.php' to your actual home page URL
+        exit();
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
